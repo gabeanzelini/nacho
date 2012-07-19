@@ -1,0 +1,450 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0037365E15B8C37B00793D29 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0037365D15B8C37B00793D29 /* Cocoa.framework */; };
+		0037366815B8C37B00793D29 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0037366615B8C37B00793D29 /* InfoPlist.strings */; };
+		0037366A15B8C37B00793D29 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0037366915B8C37B00793D29 /* main.m */; };
+		0037366E15B8C37B00793D29 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 0037366C15B8C37B00793D29 /* Credits.rtf */; };
+		0037367115B8C37B00793D29 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0037367015B8C37B00793D29 /* AppDelegate.m */; };
+		0037367415B8C37B00793D29 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0037367215B8C37B00793D29 /* MainMenu.xib */; };
+		0037367C15B8C37B00793D29 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0037367B15B8C37B00793D29 /* SenTestingKit.framework */; };
+		0037367D15B8C37B00793D29 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0037365D15B8C37B00793D29 /* Cocoa.framework */; };
+		0037368515B8C37B00793D29 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0037368315B8C37B00793D29 /* InfoPlist.strings */; };
+		0037368815B8C37B00793D29 /* nachoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0037368715B8C37B00793D29 /* nachoTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0037367E15B8C37B00793D29 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0037365015B8C37B00793D29 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0037365815B8C37B00793D29;
+			remoteInfo = nacho;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0037365915B8C37B00793D29 /* nacho.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nacho.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0037365D15B8C37B00793D29 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		0037366015B8C37B00793D29 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		0037366115B8C37B00793D29 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		0037366215B8C37B00793D29 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0037366515B8C37B00793D29 /* nacho-Info.plist */ = {isa = PBXFileReference; path = "nacho-Info.plist"; sourceTree = "<group>"; };
+		0037366715B8C37B00793D29 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0037366915B8C37B00793D29 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0037366B15B8C37B00793D29 /* nacho-Prefix.pch */ = {isa = PBXFileReference; path = "nacho-Prefix.pch"; sourceTree = "<group>"; };
+		0037366D15B8C37B00793D29 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		0037366F15B8C37B00793D29 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		0037367015B8C37B00793D29 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		0037367315B8C37B00793D29 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		0037367A15B8C37B00793D29 /* nachoTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = nachoTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0037367B15B8C37B00793D29 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		0037368215B8C37B00793D29 /* nachoTests-Info.plist */ = {isa = PBXFileReference; path = "nachoTests-Info.plist"; sourceTree = "<group>"; };
+		0037368415B8C37B00793D29 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0037368615B8C37B00793D29 /* nachoTests.h */ = {isa = PBXFileReference; path = nachoTests.h; sourceTree = "<group>"; };
+		0037368715B8C37B00793D29 /* nachoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = nachoTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0037365615B8C37B00793D29 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0037365E15B8C37B00793D29 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0037367615B8C37B00793D29 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0037367C15B8C37B00793D29 /* SenTestingKit.framework in Frameworks */,
+				0037367D15B8C37B00793D29 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0037364E15B8C37B00793D29 = {
+			isa = PBXGroup;
+			children = (
+				0037366315B8C37B00793D29 /* nacho */,
+				0037368015B8C37B00793D29 /* nachoTests */,
+				0037365C15B8C37B00793D29 /* Frameworks */,
+				0037365A15B8C37B00793D29 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0037365A15B8C37B00793D29 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0037365915B8C37B00793D29 /* nacho.app */,
+				0037367A15B8C37B00793D29 /* nachoTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0037365C15B8C37B00793D29 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0037365D15B8C37B00793D29 /* Cocoa.framework */,
+				0037367B15B8C37B00793D29 /* SenTestingKit.framework */,
+				0037365F15B8C37B00793D29 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0037365F15B8C37B00793D29 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0037366015B8C37B00793D29 /* AppKit.framework */,
+				0037366115B8C37B00793D29 /* CoreData.framework */,
+				0037366215B8C37B00793D29 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		0037366315B8C37B00793D29 /* nacho */ = {
+			isa = PBXGroup;
+			children = (
+				0037366F15B8C37B00793D29 /* AppDelegate.h */,
+				0037367015B8C37B00793D29 /* AppDelegate.m */,
+				0037367215B8C37B00793D29 /* MainMenu.xib */,
+				0037366415B8C37B00793D29 /* Supporting Files */,
+			);
+			path = nacho;
+			sourceTree = "<group>";
+		};
+		0037366415B8C37B00793D29 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0037366515B8C37B00793D29 /* nacho-Info.plist */,
+				0037366615B8C37B00793D29 /* InfoPlist.strings */,
+				0037366915B8C37B00793D29 /* main.m */,
+				0037366B15B8C37B00793D29 /* nacho-Prefix.pch */,
+				0037366C15B8C37B00793D29 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0037368015B8C37B00793D29 /* nachoTests */ = {
+			isa = PBXGroup;
+			children = (
+				0037368615B8C37B00793D29 /* nachoTests.h */,
+				0037368715B8C37B00793D29 /* nachoTests.m */,
+				0037368115B8C37B00793D29 /* Supporting Files */,
+			);
+			path = nachoTests;
+			sourceTree = "<group>";
+		};
+		0037368115B8C37B00793D29 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0037368215B8C37B00793D29 /* nachoTests-Info.plist */,
+				0037368315B8C37B00793D29 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0037365815B8C37B00793D29 /* nacho */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0037368B15B8C37B00793D29 /* Build configuration list for PBXNativeTarget "nacho" */;
+			buildPhases = (
+				0037365515B8C37B00793D29 /* Sources */,
+				0037365615B8C37B00793D29 /* Frameworks */,
+				0037365715B8C37B00793D29 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = nacho;
+			productName = nacho;
+			productReference = 0037365915B8C37B00793D29 /* nacho.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0037367915B8C37B00793D29 /* nachoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0037368E15B8C37B00793D29 /* Build configuration list for PBXNativeTarget "nachoTests" */;
+			buildPhases = (
+				0037367515B8C37B00793D29 /* Sources */,
+				0037367615B8C37B00793D29 /* Frameworks */,
+				0037367715B8C37B00793D29 /* Resources */,
+				0037367815B8C37B00793D29 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0037367F15B8C37B00793D29 /* PBXTargetDependency */,
+			);
+			name = nachoTests;
+			productName = nachoTests;
+			productReference = 0037367A15B8C37B00793D29 /* nachoTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0037365015B8C37B00793D29 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 0037365315B8C37B00793D29 /* Build configuration list for PBXProject "nacho" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0037364E15B8C37B00793D29;
+			productRefGroup = 0037365A15B8C37B00793D29 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0037365815B8C37B00793D29 /* nacho */,
+				0037367915B8C37B00793D29 /* nachoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0037365715B8C37B00793D29 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0037366815B8C37B00793D29 /* InfoPlist.strings in Resources */,
+				0037366E15B8C37B00793D29 /* Credits.rtf in Resources */,
+				0037367415B8C37B00793D29 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0037367715B8C37B00793D29 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0037368515B8C37B00793D29 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0037367815B8C37B00793D29 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0037365515B8C37B00793D29 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0037366A15B8C37B00793D29 /* main.m in Sources */,
+				0037367115B8C37B00793D29 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0037367515B8C37B00793D29 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0037368815B8C37B00793D29 /* nachoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0037367F15B8C37B00793D29 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0037365815B8C37B00793D29 /* nacho */;
+			targetProxy = 0037367E15B8C37B00793D29 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0037366615B8C37B00793D29 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0037366715B8C37B00793D29 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		0037366C15B8C37B00793D29 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0037366D15B8C37B00793D29 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		0037367215B8C37B00793D29 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0037367315B8C37B00793D29 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		0037368315B8C37B00793D29 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0037368415B8C37B00793D29 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0037368915B8C37B00793D29 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		0037368A15B8C37B00793D29 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		0037368C15B8C37B00793D29 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "nacho/nacho-Prefix.pch";
+				INFOPLIST_FILE = "nacho/nacho-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		0037368D15B8C37B00793D29 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "nacho/nacho-Prefix.pch";
+				INFOPLIST_FILE = "nacho/nacho-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		0037368F15B8C37B00793D29 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/nacho.app/Contents/MacOS/nacho";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "nacho/nacho-Prefix.pch";
+				INFOPLIST_FILE = "nachoTests/nachoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		0037369015B8C37B00793D29 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/nacho.app/Contents/MacOS/nacho";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "nacho/nacho-Prefix.pch";
+				INFOPLIST_FILE = "nachoTests/nachoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0037365315B8C37B00793D29 /* Build configuration list for PBXProject "nacho" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0037368915B8C37B00793D29 /* Debug */,
+				0037368A15B8C37B00793D29 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0037368B15B8C37B00793D29 /* Build configuration list for PBXNativeTarget "nacho" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0037368C15B8C37B00793D29 /* Debug */,
+				0037368D15B8C37B00793D29 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		0037368E15B8C37B00793D29 /* Build configuration list for PBXNativeTarget "nachoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0037368F15B8C37B00793D29 /* Debug */,
+				0037369015B8C37B00793D29 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0037365015B8C37B00793D29 /* Project object */;
+}
