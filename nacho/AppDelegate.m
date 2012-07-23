@@ -39,7 +39,7 @@ static NSString *const REFRESH_INTERVAL_KEY = @"REFRESH_INTERVAL";
     
     [self refreshList:self];
     
-    timer = [NSTimer scheduledTimerWithTimeInterval: [[userDefaults valueForKey:REFRESH_INTERVAL_KEY] intValue]
+    timer = [NSTimer scheduledTimerWithTimeInterval: 30
                                              target: self
                                            selector: @selector(refreshList:) 
                                            userInfo: nil 
@@ -52,7 +52,6 @@ static NSString *const REFRESH_INTERVAL_KEY = @"REFRESH_INTERVAL";
     NSMutableDictionary *defaultValues = [NSMutableDictionary dictionary];
     [defaultValues setValue:@"http://nagios" forKey:NAGIOS_URL_KEY];
     [defaultValues setValue:@"8080" forKey:API_PORT_KEY];
-    [defaultValues setValue:[NSNumber numberWithInt:30] forKey:REFRESH_INTERVAL_KEY];
     
     userDefaults =[NSUserDefaults standardUserDefaults];
     [userDefaults registerDefaults:defaultValues];
@@ -75,7 +74,9 @@ static NSString *const REFRESH_INTERVAL_KEY = @"REFRESH_INTERVAL";
     
     [statusItem setImage:allGood];
     
-    BOOL allIsGood = true;
+    BOOL lastRunGood = allIsGood;
+    
+    allIsGood = YES;
     
     while (host = [enumerator nextObject]) {
         NSMenuItem *item = [menu insertItemWithTitle: host.hostName
@@ -90,7 +91,7 @@ static NSString *const REFRESH_INTERVAL_KEY = @"REFRESH_INTERVAL";
         n = n + 1;
     }
     
-    if(!allIsGood){
+    if(!allIsGood && lastRunGood){
         [statusItem setImage:somethingDown];
         [errorSound play];
     }
