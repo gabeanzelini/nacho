@@ -3,7 +3,7 @@
 Nacho is a status bar app that displays the status of [nagios](http://www.nagios.org/) hosts via [nagios-api](https://github.com/xb95/nagios-api/).
 
 ##Setup
-Go get https://github.com/xb95/nagios-api/[nagios-api](http://github.com/xb95/nagios-api/) and install it.
+Go get [nagios-api](http://github.com/xb95/nagios-api/) and install it.
 
 ###Download
 - Download [nacho.zip](https://github.com/downloads/gabeanzelini/nacho/nacho.zip)
