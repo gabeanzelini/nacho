@@ -17,6 +17,14 @@
 		0037367D15B8C37B00793D29 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0037365D15B8C37B00793D29 /* Cocoa.framework */; };
 		0037368515B8C37B00793D29 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0037368315B8C37B00793D29 /* InfoPlist.strings */; };
 		0037368815B8C37B00793D29 /* nachoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0037368715B8C37B00793D29 /* nachoTests.m */; };
+		003BB7A015BDABB50035CDE1 /* app-icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 0021C6CE15BD97F3004FEEB7 /* app-icon.icns */; };
+		00BBD20115B9CC060076AEFF /* YAJL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00BBD20015B9CC060076AEFF /* YAJL.framework */; };
+		00BBD20315B9CC4D0076AEFF /* YAJL.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 00BBD20015B9CC060076AEFF /* YAJL.framework */; };
+		00BBD21A15BB447B0076AEFF /* HostStatusFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 00BBD21915BB447B0076AEFF /* HostStatusFetcher.m */; };
+		00BBD21D15BB46880076AEFF /* Host.m in Sources */ = {isa = PBXBuildFile; fileRef = 00BBD21C15BB46880076AEFF /* Host.m */; };
+		00BBD22115BCC86A0076AEFF /* all-good.png in Resources */ = {isa = PBXBuildFile; fileRef = 00BBD21E15BCC86A0076AEFF /* all-good.png */; };
+		00BBD22215BCC86A0076AEFF /* error-fetching.png in Resources */ = {isa = PBXBuildFile; fileRef = 00BBD21F15BCC86A0076AEFF /* error-fetching.png */; };
+		00BBD22315BCC86A0076AEFF /* something-down.png in Resources */ = {isa = PBXBuildFile; fileRef = 00BBD22015BCC86A0076AEFF /* something-down.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,26 +37,53 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		00BBD1FF15B9CBA00076AEFF /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				00BBD20315B9CC4D0076AEFF /* YAJL.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		0021C6C215BD9304004FEEB7 /* all-good.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "all-good.png"; sourceTree = "<group>"; };
+		0021C6C315BD9304004FEEB7 /* error-fetching.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "error-fetching.png"; sourceTree = "<group>"; };
+		0021C6C415BD9304004FEEB7 /* something-down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "something-down.png"; sourceTree = "<group>"; };
+		0021C6C515BD9304004FEEB7 /* status-icons.acorn */ = {isa = PBXFileReference; lastKnownFileType = file; path = "status-icons.acorn"; sourceTree = "<group>"; };
+		0021C6CE15BD97F3004FEEB7 /* app-icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = "app-icon.icns"; path = "Images/app-icon.icns"; sourceTree = "<group>"; };
+		0021C6D015BD982E004FEEB7 /* app-icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = "app-icon.icns"; sourceTree = "<group>"; };
 		0037365915B8C37B00793D29 /* nacho.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nacho.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0037365D15B8C37B00793D29 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		0037366015B8C37B00793D29 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		0037366115B8C37B00793D29 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		0037366215B8C37B00793D29 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		0037366515B8C37B00793D29 /* nacho-Info.plist */ = {isa = PBXFileReference; path = "nacho-Info.plist"; sourceTree = "<group>"; };
+		0037366515B8C37B00793D29 /* nacho-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "nacho-Info.plist"; sourceTree = "<group>"; };
 		0037366715B8C37B00793D29 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0037366915B8C37B00793D29 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		0037366B15B8C37B00793D29 /* nacho-Prefix.pch */ = {isa = PBXFileReference; path = "nacho-Prefix.pch"; sourceTree = "<group>"; };
+		0037366B15B8C37B00793D29 /* nacho-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "nacho-Prefix.pch"; sourceTree = "<group>"; };
 		0037366D15B8C37B00793D29 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		0037366F15B8C37B00793D29 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		0037366F15B8C37B00793D29 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0037367015B8C37B00793D29 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		0037367315B8C37B00793D29 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		0037367A15B8C37B00793D29 /* nachoTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = nachoTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0037367B15B8C37B00793D29 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		0037368215B8C37B00793D29 /* nachoTests-Info.plist */ = {isa = PBXFileReference; path = "nachoTests-Info.plist"; sourceTree = "<group>"; };
+		0037368215B8C37B00793D29 /* nachoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "nachoTests-Info.plist"; sourceTree = "<group>"; };
 		0037368415B8C37B00793D29 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		0037368615B8C37B00793D29 /* nachoTests.h */ = {isa = PBXFileReference; path = nachoTests.h; sourceTree = "<group>"; };
+		0037368615B8C37B00793D29 /* nachoTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = nachoTests.h; sourceTree = "<group>"; };
 		0037368715B8C37B00793D29 /* nachoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = nachoTests.m; sourceTree = "<group>"; };
+		00BBD20015B9CC060076AEFF /* YAJL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YAJL.framework; path = nacho/Frameworks/YAJL.framework; sourceTree = "<group>"; };
+		00BBD21815BB447B0076AEFF /* HostStatusFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostStatusFetcher.h; sourceTree = "<group>"; };
+		00BBD21915BB447B0076AEFF /* HostStatusFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostStatusFetcher.m; sourceTree = "<group>"; };
+		00BBD21B15BB46880076AEFF /* Host.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Host.h; sourceTree = "<group>"; };
+		00BBD21C15BB46880076AEFF /* Host.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Host.m; sourceTree = "<group>"; };
+		00BBD21E15BCC86A0076AEFF /* all-good.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "all-good.png"; path = "Images/all-good.png"; sourceTree = "<group>"; };
+		00BBD21F15BCC86A0076AEFF /* error-fetching.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "error-fetching.png"; path = "Images/error-fetching.png"; sourceTree = "<group>"; };
+		00BBD22015BCC86A0076AEFF /* something-down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "something-down.png"; path = "Images/something-down.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00BBD20115B9CC060076AEFF /* YAJL.framework in Frameworks */,
 				0037365E15B8C37B00793D29 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -72,9 +108,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0021C6C115BD9304004FEEB7 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				0021C6C215BD9304004FEEB7 /* all-good.png */,
+				0021C6C315BD9304004FEEB7 /* error-fetching.png */,
+				0021C6C415BD9304004FEEB7 /* something-down.png */,
+				0021C6C515BD9304004FEEB7 /* status-icons.acorn */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		0037364E15B8C37B00793D29 = {
 			isa = PBXGroup;
 			children = (
+				0021C6D015BD982E004FEEB7 /* app-icon.icns */,
+				00BBD20015B9CC060076AEFF /* YAJL.framework */,
 				0037366315B8C37B00793D29 /* nacho */,
 				0037368015B8C37B00793D29 /* nachoTests */,
 				0037365C15B8C37B00793D29 /* Frameworks */,
@@ -116,8 +165,12 @@
 			children = (
 				0037366F15B8C37B00793D29 /* AppDelegate.h */,
 				0037367015B8C37B00793D29 /* AppDelegate.m */,
+				00BBD21815BB447B0076AEFF /* HostStatusFetcher.h */,
+				00BBD21915BB447B0076AEFF /* HostStatusFetcher.m */,
 				0037367215B8C37B00793D29 /* MainMenu.xib */,
 				0037366415B8C37B00793D29 /* Supporting Files */,
+				00BBD21B15BB46880076AEFF /* Host.h */,
+				00BBD21C15BB46880076AEFF /* Host.m */,
 			);
 			path = nacho;
 			sourceTree = "<group>";
@@ -125,6 +178,11 @@
 		0037366415B8C37B00793D29 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0021C6CE15BD97F3004FEEB7 /* app-icon.icns */,
+				0021C6C115BD9304004FEEB7 /* Images */,
+				00BBD21E15BCC86A0076AEFF /* all-good.png */,
+				00BBD21F15BCC86A0076AEFF /* error-fetching.png */,
+				00BBD22015BCC86A0076AEFF /* something-down.png */,
 				0037366515B8C37B00793D29 /* nacho-Info.plist */,
 				0037366615B8C37B00793D29 /* InfoPlist.strings */,
 				0037366915B8C37B00793D29 /* main.m */,
@@ -163,6 +221,7 @@
 				0037365515B8C37B00793D29 /* Sources */,
 				0037365615B8C37B00793D29 /* Frameworks */,
 				0037365715B8C37B00793D29 /* Resources */,
+				00BBD1FF15B9CBA00076AEFF /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -226,6 +285,10 @@
 				0037366815B8C37B00793D29 /* InfoPlist.strings in Resources */,
 				0037366E15B8C37B00793D29 /* Credits.rtf in Resources */,
 				0037367415B8C37B00793D29 /* MainMenu.xib in Resources */,
+				00BBD22115BCC86A0076AEFF /* all-good.png in Resources */,
+				00BBD22215BCC86A0076AEFF /* error-fetching.png in Resources */,
+				00BBD22315BCC86A0076AEFF /* something-down.png in Resources */,
+				003BB7A015BDABB50035CDE1 /* app-icon.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +325,8 @@
 			files = (
 				0037366A15B8C37B00793D29 /* main.m in Sources */,
 				0037367115B8C37B00793D29 /* AppDelegate.m in Sources */,
+				00BBD21A15BB447B0076AEFF /* HostStatusFetcher.m in Sources */,
+				00BBD21D15BB46880076AEFF /* Host.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +405,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -361,6 +427,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				SDKROOT = macosx;
 			};
@@ -369,6 +436,13 @@
 		0037368C15B8C37B00793D29 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../Downloads/Built CURLHandle 2.0\"",
+					"\"$(SRCROOT)/../yajl-objc/Example/TestApp/Frameworks\"",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/nacho/Frameworks\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "nacho/nacho-Prefix.pch";
 				INFOPLIST_FILE = "nacho/nacho-Info.plist";
@@ -380,6 +454,13 @@
 		0037368D15B8C37B00793D29 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../Downloads/Built CURLHandle 2.0\"",
+					"\"$(SRCROOT)/../yajl-objc/Example/TestApp/Frameworks\"",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/nacho/Frameworks\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "nacho/nacho-Prefix.pch";
 				INFOPLIST_FILE = "nacho/nacho-Info.plist";
@@ -435,6 +516,7 @@
 				0037368D15B8C37B00793D29 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0037368E15B8C37B00793D29 /* Build configuration list for PBXNativeTarget "nachoTests" */ = {
 			isa = XCConfigurationList;
@@ -443,6 +525,7 @@
 				0037369015B8C37B00793D29 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

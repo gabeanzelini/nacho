@@ -8,8 +8,20 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
+@interface AppDelegate : NSObject <NSApplicationDelegate>{
+    IBOutlet NSMenu *menu;
+    IBOutlet NSTextField *nagiosUrl;
+    IBOutlet NSTextField *apiPort;
+    IBOutlet NSTextField *refreshInterval;
 
-@property (assign) IBOutlet NSWindow *window;
+    NSStatusItem *statusItem;
+    NSTimer *timer;
+    NSImage *somethingDown;
+    NSImage *allGood;
+    NSImage *errorFetching;
+    NSUserDefaults *userDefaults;
+}
 
+- (IBAction)refreshList:(id)sender;
+- (IBAction)goToURL:(NSMenuItem *)sender;
 @end
