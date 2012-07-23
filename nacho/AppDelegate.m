@@ -33,9 +33,8 @@ static NSString *const REFRESH_INTERVAL_KEY = @"REFRESH_INTERVAL";
     allGood = [NSImage imageNamed:@"all-good.png"];
     errorFetching = [NSImage imageNamed:@"error-fetching.png"];
     errorSound = [NSSound soundNamed:@"Basso.aiff"];
-    allIsGood = YES;
     
-    
+    alreadyBeeped = NO;
     
     
     [self refreshList:self];
@@ -75,9 +74,8 @@ static NSString *const REFRESH_INTERVAL_KEY = @"REFRESH_INTERVAL";
     
     [statusItem setImage:allGood];
     
-    BOOL lastRunGood = allIsGood;
     
-    allIsGood = YES;
+    BOOL allIsGood = YES;
     
     while (host = [enumerator nextObject]) {
         NSMenuItem *item = [menu insertItemWithTitle: host.hostName
@@ -92,9 +90,14 @@ static NSString *const REFRESH_INTERVAL_KEY = @"REFRESH_INTERVAL";
         n = n + 1;
     }
     
-    if(!allIsGood && lastRunGood){
+    if(!allIsGood && !alreadyBeeped){
+        alreadyBeeped = YES;
         [statusItem setImage:somethingDown];
         [errorSound play];
+    }
+    
+    if(allIsGood){
+        alreadyBeeped = NO;
     }
 }
 

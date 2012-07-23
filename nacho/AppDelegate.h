@@ -13,7 +13,7 @@
     IBOutlet NSTextField *nagiosUrl;
     IBOutlet NSTextField *apiPort;
     IBOutlet NSTextField *refreshInterval;
-    BOOL allIsGood;
+    BOOL alreadyBeeped;
 
     NSStatusItem *statusItem;
     NSTimer *timer;
