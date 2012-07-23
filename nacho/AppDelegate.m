@@ -33,6 +33,7 @@ static NSString *const REFRESH_INTERVAL_KEY = @"REFRESH_INTERVAL";
     allGood = [NSImage imageNamed:@"all-good.png"];
     errorFetching = [NSImage imageNamed:@"error-fetching.png"];
     errorSound = [NSSound soundNamed:@"Basso.aiff"];
+    allIsGood = YES;
     
     
     
