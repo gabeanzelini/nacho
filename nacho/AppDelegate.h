@@ -20,6 +20,7 @@
     NSImage *allGood;
     NSImage *errorFetching;
     NSUserDefaults *userDefaults;
+    NSSound *errorSound;
 }
 
 - (IBAction)refreshList:(id)sender;

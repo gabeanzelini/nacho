@@ -32,6 +32,7 @@ static NSString *const REFRESH_INTERVAL_KEY = @"REFRESH_INTERVAL";
     somethingDown = [NSImage imageNamed:@"something-down.png"];
     allGood = [NSImage imageNamed:@"all-good.png"];
     errorFetching = [NSImage imageNamed:@"error-fetching.png"];
+    errorSound = [NSSound soundNamed:@"Basso.aiff"];
     
     
     
@@ -74,6 +75,8 @@ static NSString *const REFRESH_INTERVAL_KEY = @"REFRESH_INTERVAL";
     
     [statusItem setImage:allGood];
     
+    BOOL allIsGood = true;
+    
     while (host = [enumerator nextObject]) {
         NSMenuItem *item = [menu insertItemWithTitle: host.hostName
                                               action: @selector(goToURL:) 
@@ -82,9 +85,14 @@ static NSString *const REFRESH_INTERVAL_KEY = @"REFRESH_INTERVAL";
         
         if (!host.alive) {
             [item setImage:somethingDown];
-            [statusItem setImage:somethingDown];
+            allIsGood = NO;
         }
         n = n + 1;
+    }
+    
+    if(!allIsGood){
+        [statusItem setImage:somethingDown];
+        [errorSound play];
     }
 }
 

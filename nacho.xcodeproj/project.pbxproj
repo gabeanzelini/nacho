@@ -25,6 +25,7 @@
 		00BBD22115BCC86A0076AEFF /* all-good.png in Resources */ = {isa = PBXBuildFile; fileRef = 00BBD21E15BCC86A0076AEFF /* all-good.png */; };
 		00BBD22215BCC86A0076AEFF /* error-fetching.png in Resources */ = {isa = PBXBuildFile; fileRef = 00BBD21F15BCC86A0076AEFF /* error-fetching.png */; };
 		00BBD22315BCC86A0076AEFF /* something-down.png in Resources */ = {isa = PBXBuildFile; fileRef = 00BBD22015BCC86A0076AEFF /* something-down.png */; };
+		00EC5BF715BDECFC009B737E /* Basso.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 00EC5BF615BDECFC009B737E /* Basso.aiff */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 		00BBD21E15BCC86A0076AEFF /* all-good.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "all-good.png"; path = "Images/all-good.png"; sourceTree = "<group>"; };
 		00BBD21F15BCC86A0076AEFF /* error-fetching.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "error-fetching.png"; path = "Images/error-fetching.png"; sourceTree = "<group>"; };
 		00BBD22015BCC86A0076AEFF /* something-down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "something-down.png"; path = "Images/something-down.png"; sourceTree = "<group>"; };
+		00EC5BF615BDECFC009B737E /* Basso.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Basso.aiff; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +165,7 @@
 		0037366315B8C37B00793D29 /* nacho */ = {
 			isa = PBXGroup;
 			children = (
+				00EC5BF615BDECFC009B737E /* Basso.aiff */,
 				0037366F15B8C37B00793D29 /* AppDelegate.h */,
 				0037367015B8C37B00793D29 /* AppDelegate.m */,
 				00BBD21815BB447B0076AEFF /* HostStatusFetcher.h */,
@@ -289,6 +292,7 @@
 				00BBD22215BCC86A0076AEFF /* error-fetching.png in Resources */,
 				00BBD22315BCC86A0076AEFF /* something-down.png in Resources */,
 				003BB7A015BDABB50035CDE1 /* app-icon.icns in Resources */,
+				00EC5BF715BDECFC009B737E /* Basso.aiff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
