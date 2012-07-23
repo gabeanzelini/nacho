@@ -18,8 +18,8 @@
     return _hostName;
 }
 
--(BOOL)alive{
-    return [[_dict objectForKey:@"current_state"] intValue] == 0;
+-(BOOL)alive{       
+    return [[[[_dict objectForKey:@"services"] objectForKey:@"HTTP"] objectForKey:@"current_state"] intValue] == 0;
 }
 
 @end
