@@ -11,8 +11,8 @@
 #import "Host.h"
 
 @implementation HostStatusFetcher
--(NSArray *)fetchWithUrl:(NSString *)url{
-    NSURLRequest *urlRequest = [NSURLRequest requestWithURL: [NSURL URLWithString: url]];
+-(NSArray *)fetchWithUrl:(NSURL *)url{
+    NSURLRequest *urlRequest = [NSURLRequest requestWithURL: url];
     NSError *error = nil;
     NSData *response = [NSURLConnection sendSynchronousRequest:urlRequest returningResponse:nil error:&error];
     

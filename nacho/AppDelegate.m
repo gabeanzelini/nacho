@@ -15,9 +15,8 @@
 
 
 
-static NSString *const NAGIOS_URL_KEY = @"NAGIOS_URL";
-static NSString *const API_PORT_KEY = @"API_PORT";
-static NSString *const REFRESH_INTERVAL_KEY = @"REFRESH_INTERVAL";
+static NSString *const NAGIOS_API_URL_KEY = @"NAGIOS_API_URL";
+static NSString *const NAGIOS_LINK_URL_KEY = @"NAGIOS_LINK_URL";
 
 -(void)applicationDidFinishLaunching:(NSNotification *)notification{
     
@@ -45,13 +44,12 @@ static NSString *const REFRESH_INTERVAL_KEY = @"REFRESH_INTERVAL";
                                            userInfo: nil 
                                             repeats: YES];
     
-    
 }
 
 -(void)setUpUserDefaults{
     NSMutableDictionary *defaultValues = [NSMutableDictionary dictionary];
-    [defaultValues setValue:@"http://nagios" forKey:NAGIOS_URL_KEY];
-    [defaultValues setValue:@"8080" forKey:API_PORT_KEY];
+    [defaultValues setValue:@"http://nagios:8080" forKey:NAGIOS_API_URL_KEY];
+    [defaultValues setValue:@"http://nagios" forKey:NAGIOS_LINK_URL_KEY];
     
     userDefaults =[NSUserDefaults standardUserDefaults];
     [userDefaults registerDefaults:defaultValues];
@@ -78,21 +76,21 @@ static NSString *const REFRESH_INTERVAL_KEY = @"REFRESH_INTERVAL";
     BOOL allIsGood = YES;
     
     while (host = [enumerator nextObject]) {
-        NSMenuItem *item = [menu insertItemWithTitle: host.hostName
-                                              action: @selector(goToURL:) 
-                                       keyEquivalent: @"" atIndex:n];
+        NSMenuItem *item = [[NSMenuItem alloc] initWithTitle:host.hostName action:@selector(goToURL:) keyEquivalent:@""];
+        [item setTarget:self];
+        [menu insertItem:item atIndex:n];
         
         
         if (!host.alive) {
             [item setImage:somethingDown];
             allIsGood = NO;
+            [statusItem setImage:somethingDown];
         }
         n = n + 1;
     }
     
     if(!allIsGood && !alreadyBeeped){
         alreadyBeeped = YES;
-        [statusItem setImage:somethingDown];
         [errorSound play];
     }
     
@@ -103,13 +101,10 @@ static NSString *const REFRESH_INTERVAL_KEY = @"REFRESH_INTERVAL";
 
 - (void)refreshList:(id)sender{
     
-    NSString *domain = [userDefaults valueForKey:NAGIOS_URL_KEY];
-    NSString *port = [userDefaults valueForKey:API_PORT_KEY];
-    
-    NSString *urlString = [NSString stringWithFormat:@"%@:%@/state",domain,port];
+    NSURL *domain = [NSURL URLWithString:[userDefaults valueForKey:NAGIOS_API_URL_KEY]];
     
     
-    NSArray *hosts = [[[HostStatusFetcher alloc] init] fetchWithUrl:urlString];
+    NSArray *hosts = [[[HostStatusFetcher alloc] init] fetchWithUrl:[NSURL URLWithString:@"/state" relativeToURL:domain]];
     
     
     [self clearMenu];
@@ -128,8 +123,11 @@ static NSString *const REFRESH_INTERVAL_KEY = @"REFRESH_INTERVAL";
 
 
 -(IBAction)goToURL:(NSMenuItem *)sender{
-    NSString *url = [NSString stringWithFormat: [NSString stringWithFormat:@"%@/extinfo.cgi?type=1&host=%@", 
-                                                 [userDefaults valueForKey:NAGIOS_URL_KEY], [sender title]]];
-    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:url]];
+    
+    NSURL *domain = [NSURL URLWithString:[userDefaults valueForKey:NAGIOS_LINK_URL_KEY]];
+    
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"/extinfo.cgi?type=1&host=%@",sender.title] relativeToURL:domain];
+    
+    [[NSWorkspace sharedWorkspace] openURL: url];
 }
 @end
