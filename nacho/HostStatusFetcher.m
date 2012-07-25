@@ -37,6 +37,9 @@
                                       andDictionary: [dict objectForKey:hostName]]];
     }
     
-    return hosts;
+    return [hosts sortedArrayUsingComparator:^NSComparisonResult(Host *obj1, Host *obj2) {
+        return [obj1.hostName compare: obj2.hostName];
+    }];
+    
 }
 @end
