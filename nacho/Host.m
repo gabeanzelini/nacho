@@ -18,8 +18,26 @@
     return _hostName;
 }
 
--(BOOL)alive{       
-    return [[[[_dict objectForKey:@"services"] objectForKey:@"HTTP"] objectForKey:@"current_state"] intValue] == 0;
+-(BOOL)currentState:(NSDictionary *)dict
+{
+    BOOL hasCurrentState = [[dict allKeys] containsObject:@"current_state"];
+    
+    if (hasCurrentState && [[dict objectForKey:@"current_state"] intValue] == 0) {
+        return true;
+    }else{
+        for(id obj in [dict allValues])
+        {
+            if([obj isKindOfClass:[NSDictionary class]]){
+                return [self currentState: obj];
+            }
+        }
+    }
+    
+    return false;
+}
+
+-(BOOL)alive{
+    return [self currentState:_dict];
 }
 
 @end
